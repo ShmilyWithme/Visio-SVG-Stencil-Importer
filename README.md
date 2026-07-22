@@ -2,6 +2,31 @@
 
 将本地 SVG 图标批量转换为可复用的 Microsoft Visio 形状库（`.vssx`）。每个 SVG 会成为一个可命名、可拖拽的主控形状，适用于绘制架构图、流程图和科研示意图时建立自己的图标库。
 
+## 安装到 Codex
+
+在 Windows PowerShell 中运行以下命令，将此仓库克隆到 Codex 默认的 Skill 目录：
+
+```powershell
+$skillRoot = Join-Path $env:USERPROFILE '.codex\skills'
+New-Item -ItemType Directory -Force -Path $skillRoot | Out-Null
+git clone https://github.com/ShmilyWithme/Visio-SVG-Stencil-Importer.git `
+  (Join-Path $skillRoot 'visio-svg-stencil-importer')
+```
+
+关闭并重新打开 Codex，或新建一个任务，使其重新发现 Skill。之后可在对话中明确使用：
+
+```text
+使用 $visio-svg-stencil-importer 将 C:\icons 中的 SVG 导入为 Visio 形状库。
+```
+
+更新已安装的版本：
+
+```powershell
+git -C (Join-Path $env:USERPROFILE '.codex\skills\visio-svg-stencil-importer') pull
+```
+
+没有 Git 时，从 GitHub 的 **Code > Download ZIP** 下载并解压，将包含 `SKILL.md` 的 `visio-svg-stencil-importer` 文件夹放到 `C:\Users\你的用户名\.codex\skills\`，然后重新打开 Codex。
+
 ## 本 Skill 的作用
 
 - 扫描一个本地 SVG 文件夹。
