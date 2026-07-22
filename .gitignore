@@ -1,0 +1,3 @@
+# Generated stencil output and temporary vector-conversion artifacts.
+*.vssx
+*.emf

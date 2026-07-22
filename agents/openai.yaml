@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visio SVG Stencil Importer"
+  short_description: "Batch-import SVG icons into reusable Visio stencils."
+  default_prompt: "Use $visio-svg-stencil-importer to create a reusable Visio stencil from my SVG icon folder."
